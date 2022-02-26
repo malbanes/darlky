@@ -7,8 +7,8 @@ Le nom de la bdd est Member_Sql_Injection
 
 On peut également dump tous les membre avec : 1 or 1=1
 on remarque que la sortie de la requete necessite 3 valeurs, ID, First name et Surname.
-On peut ensuite afficher le noms de toutes les bades et tables existantes aces
-1 AND 1=2 UNION SELECT table_name, table_type FROM information_schema.tables
+On peut ensuite afficher le noms de toutes les bases et tables existantes grace à 
+1 AND 1=2 UNION SELECT table_name, table_schema FROM information_schema.tables
 cela nous permet de faire un petit shema des bases et leurs tables.
 
 Ensuite, on affiche le nom des tables et ses colonnes avec, comme décrit plus tot, 3 éléments, 2 plus l'id ou ici la requete : 
