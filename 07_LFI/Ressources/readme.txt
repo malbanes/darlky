@@ -6,7 +6,9 @@ on peut essayer d'afficher d'autres fichier que ceux prévus en mettant le chemi
 Sur les machines de l'école on utilise apache2, on peut imaginer que l'emplacement de index.php : /var/www/html/mynewsite/index.php , pour remonter à /etc/ ils faut essayer : ../../../../etc/passwd
 un prompt nous indique que nous sommes en bonne voie : Almost
 On ne vas pas chercher plus loin. /etc/ se trouve à la racine donc on remonte suffisament pour être sure de ne plus pouvoir remonter : 
-../../../../../../../../../../etc/passwd
+../../../../../../../../../../../../../etc/passwd
+
+- https://owasp.org/www-community/attacks/Path_Traversal
 
 flag: b12c4b2cb8094750ae121a676269aa9e2872d07c06e429d25a63196ec1c8c1d0 
 
