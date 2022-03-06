@@ -1,11 +1,11 @@
 #09_CRFL
 
 ##Research explanation
-When I arrived on the website's main page, I started to check the first redirection link of the buttons available.
-- I started with the "SIGN IN" button, which redirected me to a login page, where I tried to input a fake username and a fake password. It did not work.
-- Then, I clicked on the "I forgot my password" button. Nothing was visible except the "Submit" button. If you click on it, an error is raised.
-- So, I started to inspect the page with the developer feature of my browser, no suitable elements were available on the 'Network'  inspector. 
-- So, I checked the HTML file structure. A very interesting thing was there. An unencoded email - "webmaster@borntosec.com" - was there. I changed it to put my personal email and see if something would work; maybe the password would be sent through email. I pressed the "Submit" button, and the flag appeared.
+When we arrived on the website's main page, we started to check the first redirection link of the buttons available.
+- We started with the "SIGN IN" button, which redirected me to a login page, where we tried to input a fake username and a fake password. It did not work.
+- Then, we clicked on the "I forgot my password" button. Nothing was visible except the "Submit" button. If you click on it, an error is raised.
+- So, we started to inspect the page with the developer feature of the browser, no suitable elements were available on the 'Network'  inspector. 
+- So, we checked the HTML file structure. A very interesting thing was there. An unencoded email - "webmaster@borntosec.com" - was there. We changed it to put one of our personal emails and see if something would work; maybe the password would be sent through email. We pressed the "Submit" button, and the flag appeared.
 
 
 ##Breach Details 

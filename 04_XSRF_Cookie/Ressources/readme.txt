@@ -1,14 +1,14 @@
 #04_XSRF_Cookie
 
 ##Research explanation
-- While testing several things for the Leave Feedback breach, I test several HTML injection, including this one:
+- While testing several things for the Leave Feedback breach, we tested several HTML injection, including this one:
 \<a onmouseover="alert(document.cookie)"\>xxs link\</a\>
 - After the reload of the page, an alert window appears and shows one cookie detail of the website:
 I_am_admin=68934a3e9455fa72420237eb05902327
 - We can also retrieve the cookie using the browser's developer mode (Application Tab).
 - It seems it is a hash. Let's decrypt ut using the dcode hash website -  https://www.dcode.fr/fonction-hash
 - It is an MD5 hash retrieving 'false' when decoded.
-- Let's try to change the cookie value to 'true'. After encoding it in MD5 using the website, I obtained the below hash:
+- Let's try to change the cookie value to 'true'. After encoding it in MD5 using the website, we obtained the below hash:
 b326b5062b2f0e69046810717534cb09
 - Let's load it on the website. To create a cookie on a website using js: document.cookie = "username=John Doe";
 In our case: document.cookie = "I_am_admin=b326b5062b2f0e69046810717534cb09"; which needs to be loaded in the website console.

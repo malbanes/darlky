@@ -2,16 +2,16 @@
 
 ##Research explanation
 - On the main page, there is the last call to action at the bottom of the page - 'Leave A Feedback'
-- On the next page, there are 2 fields you can fill to leave a comment on the website. I did several tests with words and SQL commands to try to identify a potential breach. I also investigated the developer feature of my browser (HTML structure, queries sent when we press 'submit'). Nothing exciting
-- After a few pieces of research on the OWASP website, I checked the Client-Side Testing OWASP potential breaches, and I chose to focus on the HTML injection testing
+- On the next page, there are 2 fields you can fill to leave a comment on the website. We did several tests with words and SQL commands to try to identify a potential breach. We also investigated the developer feature of the browser (HTML structure, queries sent when we press 'submit'). Nothing exciting
+- After a few pieces of research on the OWASP website, we checked the Client-Side Testing OWASP potential breaches, and we chose to focus on the HTML injection testing
 (https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/11-Client-side_Testing/)
-- It showed that sometimes forms are not protected enough and can read and execute the HTML tags (similar to the XSS attack in the NSA Prism JPG breach). So I tried to load several HTML tags to see how it goes, based on the example in  the OWASP  article: https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/11-Client-side_Testing/03-Testing_for_HTML_Injection
+- It showed that sometimes forms are not protected enough and can read and execute the HTML tags (similar to the XSS attack in the NSA Prism JPG breach). So we tried to load several HTML tags to see how it goes, based on the example in  the OWASP  article: https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/11-Client-side_Testing/03-Testing_for_HTML_Injection
 ex: <b>Hello</b>
 with the above example, the name is bold, and the body automatically removes the tags.
-As I had difficulties adding long HTML queries inside the fields, I changed the 'maxlength' HTML restriction using the browser's developer mode.
+As we had difficulties adding long HTML queries inside the fields, we changed the 'maxlength' HTML restriction using the browser's developer mode.
 All the tags seem identified but do not let me access the flag.
-- I continued my  investigation on the OWASP website, and I finished finding an interesting possible breach related to HTML injection combined with malformed tags:  https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html
-- I tried several commands, including this one, which help find another breach \<a onmouseover="alert(document.cookie)"\>xxs link\</a\>.
+- We continued the investigation on the OWASP website, and we finished finding an interesting possible breach related to HTML injection combined with malformed tags:  https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html
+- We tried several commands, including this one, which help find another breach \<a onmouseover="alert(document.cookie)"\>xxs link\</a\>.
 - The command which worked is a malformed 'a' tag including only this element: '<a' 
 - The flag appeared: 0FBB54BBF7D099713CA4BE297E1BC7DA0173D8B3C21C1811B916A3A86652724E
 
