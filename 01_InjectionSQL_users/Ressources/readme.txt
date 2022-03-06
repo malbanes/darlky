@@ -8,6 +8,7 @@ NB: I put '1  UNION' to close the first SQL request and load another SQL request
 - It seems the field is not protected as we received this message: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '\'administrator\'--\'' at line 1"
 - After a few pieces of research on how to display DB structure details in SQL, we found a way to return a list of all the columns and tables in the database: https://chartio.com/learn/databases/using-information-schema-views-to-check-to-see-if-table-exists-in-sql-server/ - 1 UNION SELECT TABLE_NAME, COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS
 - There is a lot of information in the new list pulled. After a few investigations, it seems some database tables are interesting, such as 'users', which appears to contain user details, and 'db_default', which seems to have the passwords of the users.
+C.f. schemaBDD.txt
 - Let's query the 'users' table with: 1 UNION SELECT first_name, last_name FROM users. An interesting result is there - ID: 1 UNION SELECT first_name, last_name FROM users 
 First name: Flag
 Surname : GetThe

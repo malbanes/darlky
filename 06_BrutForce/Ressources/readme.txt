@@ -26,11 +26,12 @@ done
 - After a long time, the credentials are found: 
 username: admin
 password: shadow
-- We just have to enter again the credentials and the flag is there: B3A6E43DDF8B4BBB4125E5E7D23040433827759D4DE1C04EA63907479A80A6B2
+- We just have either to check the terminal or enter again the credentials on the webpage; and the flag is there: B3A6E43DDF8B4BBB4125E5E7D23040433827759D4DE1C04EA63907479A80A6B2
 
 ##Breach Details 
 - As it is too easy to access hundreds of millions of valid username and password combinations for credential stuffing, default administrative account lists, automated brute force, and dictionary attack tools, the brut force attack is a really common method.
 - Loop over a list of most common credentials is really easy to do.
+- The URL structure to loop over all the possible credentials is not hidden at all and helps us quickly try with our script all the combinations. 
 
 Recommendation: 
 - There are several ways to prevent this attack, but it is difficult to totally prevent it as it is mainly due to human lack of rigor regarding passwords.

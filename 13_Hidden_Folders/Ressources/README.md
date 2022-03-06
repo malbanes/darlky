@@ -15,6 +15,7 @@ NB: -r = Turn on recursive retrieving // -nd = Do not create a hierarchy of dire
 ##Breach Details 
 - This is not a good practice to hide sensitive data through an important folder tree structure.
 - An automatic script can scrape all the data quickly and, with few retries, identify the schema structure used.
+
 Recommendation: 
 - Don't hide sensitive data on this kind of storage.
 - If you want to keep something hidden, it is better to store it on a secure database or in a local environment.

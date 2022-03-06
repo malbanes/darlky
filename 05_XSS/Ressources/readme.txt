@@ -12,7 +12,7 @@ As we had difficulties adding long HTML queries inside the fields, we changed th
 All the tags seem identified but do not let me access the flag.
 - We continued the investigation on the OWASP website, and we finished finding an interesting possible breach related to HTML injection combined with malformed tags:  https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html
 - We tried several commands, including this one, which help find another breach \<a onmouseover="alert(document.cookie)"\>xxs link\</a\>.
-- The command which worked is a malformed 'a' tag including only this element: '<a' 
+- The command which worked is a malformed 'a' tag including only this element: 'a' 
 - The flag appeared: 0FBB54BBF7D099713CA4BE297E1BC7DA0173D8B3C21C1811B916A3A86652724E
 
 ##Breach Details 
@@ -25,6 +25,6 @@ Recommendation:
 - Additional  official recommendations: https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html
 
 ##How to:
-- Input '<a'in the name and message fields
+- Input 'a' in the name and message fields
 - Press 'Sign GuestBook'
 - The flag is there
